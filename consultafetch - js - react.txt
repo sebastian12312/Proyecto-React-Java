@@ -1,0 +1,8 @@
+const consulta = await fetch('/api/controlador/buscar/empleado/'+ idEmpleado, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+       });
+       const respuestaEmpleado = await consulta.json();

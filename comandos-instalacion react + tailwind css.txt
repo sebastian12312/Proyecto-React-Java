@@ -1,0 +1,24 @@
+create proeycto react
+npx create-react-app react-ventas
+
+//iniciar proyecto react
+npm start run 
+
+//instalacion tailwind en react 
+npm install -D tailwindcss
+npx tailwindcss init
+npx tailwindcss init -p
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],// copiamos esta linea en tailwind.config.js file.
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+import './index.css';
+en el css principal copiamos esto 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,4 @@
+Map<String, Object>
+Map<String, Object> response = new HashMap<>();// nos ayyuda a retornar un mensaje en string un objeto en formato json para poder recibir en el front
+  response.put("message", "Producto Encontrado!");
+   response.put("objeto", producto);
