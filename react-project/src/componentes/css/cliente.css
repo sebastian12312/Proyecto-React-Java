@@ -1,0 +1,22 @@
+.icon-bar-client{
+    display: none;
+}
+.bg_modal{
+    background-color: rgba(170, 170, 170, 0.7);
+}
+#open-login{
+    
+}
+@media (max-width: 650px) {
+    .menu-client {
+        display: none;
+    }
+    .icon-bar-client{
+        display: block;
+    }
+}
+@media (max-width: 450px){
+ body{
+    min-width: 300px;
+ }
+}

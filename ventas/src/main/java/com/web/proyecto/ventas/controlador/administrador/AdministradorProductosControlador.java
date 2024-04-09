@@ -9,11 +9,13 @@ import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.web.proyecto.ventas.producto.clases.Carrito;
 import com.web.proyecto.ventas.producto.clases.Producto;
 import com.web.proyecto.ventas.producto.implemento.ProductoImplemento;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,12 +23,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@RequestMapping("/administrador/controlador/producto")
 @RestController
+@RequestMapping("/administrador/controlador/producto")
+@CrossOrigin(origins ="http://localhost:3000")
 public class AdministradorProductosControlador {
     @Autowired
     private ProductoImplemento productoImplement;
 
+    
     @GetMapping("/listar")
     public ArrayList<Producto> listaProducto() {
         ArrayList<Producto> listaProducto = (ArrayList) productoImplement.listaProducto();
@@ -82,4 +86,13 @@ public class AdministradorProductosControlador {
         }
         return response;
     }
+
+    @GetMapping("/agregar/carrito/{id_producto}")
+    public  ArrayList<Carrito> agregarCarrito(@PathVariable String id_producto) {
+
+        ArrayList<Carrito> listaCarrito = productoImplement.agregarCarrito(id_producto);
+       System.out.println("cantidad total++++ " +  listaCarrito.size() + listaCarrito);
+        return listaCarrito;
+    }
+    
 }

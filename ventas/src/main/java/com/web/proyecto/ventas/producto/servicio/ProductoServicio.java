@@ -3,6 +3,7 @@ package com.web.proyecto.ventas.producto.servicio;
 import java.util.ArrayList;
 import java.util.Optional;
 
+import com.web.proyecto.ventas.producto.clases.Carrito;
 import com.web.proyecto.ventas.producto.clases.Producto;
 
 public interface ProductoServicio {
@@ -10,4 +11,5 @@ public interface ProductoServicio {
      boolean eliminarProducto(String id_producto);
     Producto buscarProducto(String id_producto);
     boolean agregarProducto(Producto producto);
+    ArrayList<Carrito> agregarCarrito(String id_producto);
 }

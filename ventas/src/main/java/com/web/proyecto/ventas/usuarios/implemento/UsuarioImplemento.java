@@ -72,7 +72,7 @@ public class UsuarioImplemento implements UsuarioServicio {
             } else {
                 return null;
             }
-        } catch (Exception e) {
+        } catch (DataAccessException e) {
             return null;
         }
 

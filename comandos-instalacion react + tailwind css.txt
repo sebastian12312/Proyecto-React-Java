@@ -22,3 +22,5 @@ en el css principal copiamos esto
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/**/
+https://react-icons.github.io/react-icons/icons/ci/    ---------- iconos open source
